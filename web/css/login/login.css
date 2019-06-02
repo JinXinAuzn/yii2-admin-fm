@@ -1,0 +1,132 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.home{
+    width: 100%;
+    height: 100%;
+    background: url("../../images/login/backgroundimg.png") 100%/100%;
+}
+.loginwrap{
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 431px;
+    width: 1142px;
+    bottom: 0;
+}
+.loginwrap .whitebg{
+    position: absolute;
+    left: 0;
+    top:0;
+    width:1142px;
+    height:406px;
+    background:rgba(255,255,255,1);
+    border-radius:10px;
+}
+.loginwrap .whitebg img.topbg{
+    position: absolute;
+    bottom: -88px;
+    left: -34px;
+    width: 1209px;
+    height: 406px;
+}
+.loginwrap .whitebg form{
+    position: absolute;
+    right: 106px;
+    top:30px;
+}
+.loginwrap .whitebg form .putwrap{
+    height: 36px;
+    margin-top: 37px;
+    display: flex;
+    align-items: center;
+    width: 375px;
+    border-bottom:2px solid #e6e6e6 ;
+}
+.loginwrap .whitebg form .putwrap img{
+    width: 16px;
+    height: 20px;
+    margin-right: 21px;
+}
+.loginwrap .whitebg form .putwrap input{
+    border: none;
+    font-size: 18px;
+    outline: none;
+ }
+.loginwrap .whitebg form .codewrap{
+    display: flex;
+}
+.loginwrap .whitebg form .codewrap img{
+    width:170px;
+    height:60px;
+    margin-top: 17px;
+}
+.loginwrap .whitebg form .codewrap input{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #e6e6e6;
+    width: 165px;
+    margin-top: 35px;
+    margin-right: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 14px;
+}
+.loginwrap .whitebg form button{
+    width:375px;
+    height:50px;
+    border: none;
+    font-size: 18px;
+    color: white;
+    margin-top: 30px;
+    background:linear-gradient(108deg,rgba(255,129,112,1) 0%,rgba(255,90,87,1) 100%);
+    border-radius:30px;
+}
+.loginwrap .redbg{
+    position: absolute;
+    overflow: hidden;
+    top: -56px;
+    background: url(../../images/login/redbg.png) 100%/100%;
+    left: 120px;
+    width: 482px;
+    padding-left: 83px;
+    box-sizing: border-box;
+    height: 563px;
+}
+.loginwrap .redbg .bglogo{
+    width: 90px;
+    height: 90px;
+    margin: 136px 0 20px 4px;
+}
+.loginwrap .redbg h2{
+    font-size: 38px;
+    font-family: 黑体;
+    color: white;
+    line-height: 41px;
+}
+.loginwrap .redbg .gang{
+    width: 45px;
+    height: 6px;
+    margin: 30px 0 13px;
+    background: white;
+}
+.loginwrap .redbg h4{
+    text-transform: uppercase;
+    font-size:18px;
+    line-height: 30px;
+    color: white;
+}
+.copyright{
+    position: absolute;
+    bottom: -119px;
+    width: 100%;
+    text-align: center;
+    color: #666;
+}
