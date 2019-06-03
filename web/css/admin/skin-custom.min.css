@@ -12,7 +12,9 @@
         font-size: 2em;
     }
 }
-
+.hidden-xs{
+    color: #fff;
+}
 .form-control {
     display: block;
     width: 100%;
