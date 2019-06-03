@@ -9,7 +9,7 @@ html,body{
 .home{
     width: 100%;
     height: 100%;
-    background: url("img/backgroundimg.png") 100%/100%;
+    background: url("../../images/login/backgroundimg.png") 100%/100%;
 }
 .loginwrap{
     position: fixed;
@@ -93,7 +93,7 @@ html,body{
     position: absolute;
     overflow: hidden;
     top: -56px;
-    background: url(img/redbg.png) 100%/100%;
+    background: url(../../images/login/redbg.png) 100%/100%;
     left: 120px;
     width: 482px;
     padding-left: 83px;
