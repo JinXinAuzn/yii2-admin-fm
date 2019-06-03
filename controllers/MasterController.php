@@ -152,17 +152,19 @@ class MasterController extends BaseController
 		return $this->goHome();
 	}
 
-	/**
-	 * @description 管理员创建
-	 * @return string
-	 */
+    /**
+     * @description 管理员创建
+     * @return string
+     */
 	public function actionCreate()
 	{
-		$model = $this->findModel();
-		if ($model->load(Yii::$app->request->post()) && $model->save()) {
-			$this->showMessage('success', Yii::t('rbac-admin', 'Create Success'));
-			return $this->redirect(['index']);
-		}
+        $model = new Signup();
+        if ($model->load(Yii::$app->getRequest()->post())) {
+            if ($user = $model->signup()) {
+                $this->showMessage('success',Yii::t('rbac-admin', 'Create Success'));
+                return $this->redirect(['index']);
+            }
+        }
 		return $this->render('create', [
 			'model' => $model,
 		]);
@@ -174,11 +176,11 @@ class MasterController extends BaseController
 	 */
 	public function actionUpdate()
 	{
-		$model = $this->findModel();
-		if ($model->load(Yii::$app->request->post()) && $model->save()) {
-			$this->showMessage('success', Yii::t('rbac-admin', 'Update Success'));
-			return $this->redirect(['index']);
-		}
+        $model = new ChangePassword();
+        if ($model->load(Yii::$app->getRequest()->post()) && $model->change()) {
+            $this->showMessage('success',Yii::t('rbac-admin', 'Update Success'));
+            return $this->redirect(['index']);
+        }
 		return $this->render('update', [
 			'model' => $model,
 		]);
