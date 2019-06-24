@@ -4,7 +4,7 @@ use yii\helpers\Html;
 <!-- Main Header -->
 <header class="main-header fixed">
     <!-- Logo -->
-	<?= Html::a(Html::tag('span',Yii::t('rbac-admin','Admin_name'), ['class' => 'logo-mini']) . Html::tag('span',  Html::img($AssetUrl.'/images/admin/bg_admin.png',['style'=>'width:50px;padding-right: 14px;']).Yii::t('rbac-admin','Backend_name'), ['class' => 'logo-lg']), Yii::$app->homeUrl, ['class' => 'logo']) ?>
+	<?= Html::a(Html::tag('span',Yii::t('rbac-admin','Admin_name'), ['class' => 'logo-mini']) . Html::tag('span',  Html::img($AssetUrl.'/images/admin/bg_admin.png',['style'=>'width:77px;padding-right: 8px;']).Yii::t('rbac-admin','Backend_name'), ['class' => 'logo-lg']), Yii::$app->homeUrl, ['class' => 'logo']) ?>
     <!-- Header Navbar -->
     <nav class="navbar navbar-static-top" role="navigation">
         <!-- Sidebar toggle button-->
