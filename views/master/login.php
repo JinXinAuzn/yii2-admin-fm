@@ -52,7 +52,7 @@ $AssetUrl = $asset->baseUrl;
         </div>
         <div class="redbg">
             <img class="bglogo" src="<?= $AssetUrl ?>/images/login/logobig.png" alt="">
-            <h2>脉货后台管理系统</h2>
+            <h2><?=Yii::t('rbac-admin','login_Backend_name')?></h2>
             <div class="gang"></div>
             <h4>
                 Maihuo Backstage
