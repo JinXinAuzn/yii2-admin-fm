@@ -33,6 +33,7 @@ return [
 	'OutTime'=>'最后登录时间',
 	'Admin_name'=>'Admin',
 	'Backend_name'=>'后台管理系统',
+	'login_Backend_name'=>'后台管理系统',
 	'Copyright'=>'Copyright © '.date("Y",time()).' by  '.$_SERVER['SERVER_NAME'].' . All Rights Reserved.',
 	'Add'=>'添加',
 	'New route(s)'=>'新路由(s)',
