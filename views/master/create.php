@@ -21,8 +21,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'inputOptions' => ['class' => 'form-control']
         ],
     ]); ?>
+    <?= $form->field($model, 'real_name') ?>
     <?= $form->field($model, 'username') ?>
-    <?= $form->field($model, 'email') ?>
     <?= $form->field($model, 'password')->passwordInput() ?>
     <div class="form-group text-center">
         <?= Html::submitButton(Yii::t('rbac-admin', 'Create'), ['class' => 'btn btn-success', 'name' => 'signup-button']) ?>

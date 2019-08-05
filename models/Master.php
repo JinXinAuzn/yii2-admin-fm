@@ -17,6 +17,7 @@ use jx\admin_fm\components\Configs;
  * @property string $password_hash
  * @property string $password_reset_token
  * @property string $email
+ * @property string $real_name
  * @property string $auth_key
  * @property integer $status
  * @property integer $created_at
@@ -44,7 +45,8 @@ class Master extends ActiveRecord implements IdentityInterface
     {
         return [
             'id' => Yii::t('rbac-admin', 'ID'),
-            'username' => Yii::t('rbac-admin', 'Username'),
+            'username' =>"登录账号",
+            'real_name' => "用户名",
             'email' => Yii::t('rbac-admin', 'Email'),
             'created_at' => Yii::t('rbac-admin', 'Created At'),
             'status' => Yii::t('rbac-admin', 'Status'),

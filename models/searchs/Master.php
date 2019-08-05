@@ -18,7 +18,7 @@ class Master extends MasterModel
     {
         return [
             [['id', 'status','updated_at'], 'integer'],
-            [['username', 'auth_key', 'password_hash', 'password_reset_token', 'email','created_at'], 'safe'],
+            [['username', 'auth_key', 'real_name','password_hash', 'password_reset_token', 'email','created_at'], 'safe'],
         ];
     }
 
@@ -69,6 +69,7 @@ class Master extends MasterModel
             ->andFilterWhere(['like', 'auth_key', $this->auth_key])
             ->andFilterWhere(['like', 'password_hash', $this->password_hash])
             ->andFilterWhere(['like', 'password_reset_token', $this->password_reset_token])
+            ->andFilterWhere(['like', 'real_name', $this->real_name])
             ->andFilterWhere(['like', 'email', $this->email]);
 
         return $dataProvider;

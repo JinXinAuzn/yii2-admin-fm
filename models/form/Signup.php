@@ -13,7 +13,7 @@ use yii\base\Model;
 class Signup extends Model
 {
     public $username;
-    public $email;
+    public $real_name;
     public $password;
 
     /**
@@ -24,13 +24,13 @@ class Signup extends Model
         return [
             ['username', 'filter', 'filter' => 'trim'],
             ['username', 'required'],
-            ['username', 'unique', 'targetClass' => 'jx\admin_fm\models\Master', 'message' => 'This username has already been taken.'],
+            ['username', 'unique', 'targetClass' => 'jx\admin_fm\models\Master', 'message' => '此登陆账号已被使用'],
             ['username', 'string', 'min' => 2, 'max' => 255],
 
-            ['email', 'filter', 'filter' => 'trim'],
-            ['email', 'required'],
-            ['email', 'email'],
-            ['email', 'unique', 'targetClass' => 'jx\admin_fm\models\Master', 'message' => 'This email address has already been taken.'],
+            ['real_name', 'filter', 'filter' => 'trim'],
+            ['real_name', 'required'],
+            ['real_name', 'unique', 'targetClass' => 'jx\admin_fm\models\Master', 'message' => '此用户名已被使用'],
+            ['real_name', 'string', 'min' => 2, 'max' => 255],
 
             ['password', 'required'],
             ['password', 'string', 'min' => 6],
@@ -43,9 +43,9 @@ class Signup extends Model
 	{
 		return [
 			'id' => Yii::t('rbac-admin', 'ID'),
-			'username' => Yii::t('rbac-admin', 'Username'),
-			'email' => Yii::t('rbac-admin', 'Email'),
-			'password' => Yii::t('rbac-admin', 'Password'),
+			'username' => "登录账号",
+			'real_name' => "用户名",
+			'password' => "密码",
 
 		];
 	}
@@ -59,7 +59,7 @@ class Signup extends Model
         if ($this->validate()) {
             $user = new Master();
             $user->username = $this->username;
-            $user->email = $this->email;
+            $user->real_name = $this->real_name;
             $user->setPassword($this->password);
             $user->generateAuthKey();
             if ($user->save()) {

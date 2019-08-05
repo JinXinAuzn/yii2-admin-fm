@@ -54,11 +54,13 @@ class ChangePassword extends Model
         }
     }
 
-	/**
-	 * Change password.
-	 *
-	 * @return bool the saved model or null if saving fails
-	 */
+    /**
+     * Change password.
+     *
+     * @param $id
+     * @return bool the saved model or null if saving fails
+     * @throws \yii\base\Exception
+     */
     public function change($id)
     {
         if ($this->validate()) {
@@ -70,7 +72,6 @@ class ChangePassword extends Model
                 return true;
             }
         }
-
         return false;
     }
 }

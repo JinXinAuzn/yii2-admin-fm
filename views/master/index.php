@@ -14,8 +14,8 @@ $_html = "<div class='summary'>符合搜索条件的数据共<strong class='text
 $_empty_html = "<div class='summary'>符合搜索条件的数据共<strong class='text-danger'>0</strong> 个" . (Yii::$app->request->queryParams ? Html::a('<u>' . '取消搜索' . '</u>', \yii\helpers\Url::to(['index']), ['class' => 'btn-search-cancel']) : '') . "</div>";
 $_columns = [
 	['class' => 'yii\grid\SerialColumn'],
+    'real_name',
 	'username',
-	'email:email',
 	[
 		'attribute' => 'created_at',
 		'format' => ['date', 'php:Y-m-d'],
